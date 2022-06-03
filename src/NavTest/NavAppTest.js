@@ -20,8 +20,14 @@ export default class NavAppTest extends React.Component {
 	}
 
 	render() {
+
+
+
 		const {requestData} = this.state;
 		const {requestGridDataSource} = this.state;
+
+
+
 		return (
 			<div className="container">
 				<div className="left-content">
