@@ -1,5 +1,5 @@
 import './App.css';
-import NavigationComponent from "./NavTest/NavigationComponent";
+import NavigationComponent from "./components/NavigationComponent";
 import {BrowserRouter as Router} from 'react-router-dom';
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";

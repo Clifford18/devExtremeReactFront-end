@@ -4,7 +4,7 @@ import 'devextreme/dist/css/dx.light.css';
 import TreeView from 'devextreme-react/tree-view';
 import {REQUESTLOGSTYPES} from './Navigation Data.js';
 import DataGrid, {Column, FilterRow, Lookup, Pager, Paging} from "devextreme-react/data-grid";
-import './NavigationStyles.css';
+import './styles/NavigationStyles.css';
 
 export default class NavigationComponent extends React.Component {
 	constructor(props) {
