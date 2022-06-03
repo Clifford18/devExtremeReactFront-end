@@ -1,5 +1,6 @@
 import React from 'react';
-
+import 'devextreme/data/odata/store';
+import 'devextreme/dist/css/dx.light.css';
 import TreeView from 'devextreme-react/tree-view';
 import {REQUESTLOGSTYPES} from './NavDataTest.js';
 import DataGrid, {Column, FilterRow, Lookup, Pager, Paging} from "devextreme-react/data-grid";
