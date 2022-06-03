@@ -31,7 +31,7 @@ export default class ScrollViewApp extends React.Component {
 							showScrollbar={showScrollBarMode}
 							scrollByThumb={scrollByThumb}>
 					<div className="text-content">
-						<Task/>
+						{/*<Task/>*/}
 					</div>
 				</ScrollView>
 
