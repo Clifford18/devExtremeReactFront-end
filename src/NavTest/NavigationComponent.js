@@ -2,11 +2,11 @@ import React from 'react';
 import 'devextreme/data/odata/store';
 import 'devextreme/dist/css/dx.light.css';
 import TreeView from 'devextreme-react/tree-view';
-import {REQUESTLOGSTYPES} from './NavDataTest.js';
+import {REQUESTLOGSTYPES} from './Navigation Data.js';
 import DataGrid, {Column, FilterRow, Lookup, Pager, Paging} from "devextreme-react/data-grid";
-import './NavTestStyles.css';
+import './NavigationStyles.css';
 
-export default class NavAppTest extends React.Component {
+export default class NavigationComponent extends React.Component {
 	constructor(props) {
 		super(props);
 

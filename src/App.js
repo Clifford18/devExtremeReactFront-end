@@ -1,5 +1,5 @@
 import './App.css';
-import NavAppTest from "./NavTest/NavAppTest";
+import NavigationComponent from "./NavTest/NavigationComponent";
 import {BrowserRouter as Router} from 'react-router-dom';
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
@@ -11,7 +11,7 @@ function App() {
 			<div>
 				<HeaderComponent/>
 				<div className="container">
-					<NavAppTest/>
+					<NavigationComponent/>
 				</div>
 				<FooterComponent/>
 

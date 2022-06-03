@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import './styles/profile.css';
+import './styles/ProfileStyles.css';
 import Form from 'devextreme-react/form';
 
-export default function Profile() {
+export default function ProfileComponent() {
 
 	const employee = {
 		ID: 7,
