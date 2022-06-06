@@ -1,8 +1,8 @@
 import React from 'react';
 import ScrollView from 'devextreme-react/scroll-view';
 import service from './scrolldata';
-import Task from "../components/Tasks";
 import './ScrollViewStyles.css'
+import RequestsLogComponent from "../components/RequestsLogComponent";
 
 export default class ScrollViewApp extends React.Component {
 	constructor(props) {
@@ -22,7 +22,7 @@ export default class ScrollViewApp extends React.Component {
 
 	render() {
 		const {
-			showScrollBarMode, content, scrollByThumb, scrollByContent, pullDown,
+			showScrollBarMode, scrollByThumb, scrollByContent,
 		} = this.state;
 		return (
 			<div id="scrollview-demo">
@@ -31,7 +31,7 @@ export default class ScrollViewApp extends React.Component {
 							showScrollbar={showScrollBarMode}
 							scrollByThumb={scrollByThumb}>
 					<div className="text-content">
-						{/*<Task/>*/}
+						<RequestsLogComponent/>
 					</div>
 				</ScrollView>
 
