@@ -30,9 +30,9 @@ export const REQUESTLOGSTYPES = [{
 		text: 'Profile',
 		items: [{
 			id: '2_1',
-			text: 'My ProfileComponent',
+			text: 'My Profile',
 			title: 'Profile',
-			description: 'My ProfileComponent',
+			description: 'Details About me',
 			options: [{
 				id: '2_1_1',
 				text: 'About Me '
@@ -46,7 +46,7 @@ export const REQUESTLOGSTYPES = [{
 				id: '2_2',
 				text: 'Reset Password',
 				title: 'Reset Password',
-				description: 'My ProfileComponent',
+				description: 'Change Password',
 				options: [{
 					id: '2_2_1',
 					text: 'About Me '
