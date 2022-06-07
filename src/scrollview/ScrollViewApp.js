@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollView from 'devextreme-react/scroll-view';
 import service from './scrolldata';
+// import ChangePasswordComponent from "../components/ChangePasswordComponent";
 import './ScrollViewStyles.css'
 import RequestsLogComponent from "../components/RequestsLogComponent";
 
