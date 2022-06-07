@@ -1,6 +1,5 @@
 import React from 'react';
 import DataGrid from 'devextreme-react/data-grid';
-import {Column} from "devextreme-react/gantt";
 
 
 const columns = ['CompanyName', 'City', 'State', 'Phone', 'Fax'];
