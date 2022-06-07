@@ -3,6 +3,7 @@ import NavigationComponent from "./components/NavigationComponent";
 import {BrowserRouter as Router} from 'react-router-dom';
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
+import ScrollViewApp from "./scrollview/ScrollViewApp";
 
 
 function App() {
@@ -10,8 +11,10 @@ function App() {
 		<Router>
 			<div>
 				<HeaderComponent/>
+
 				<div className="container">
 					<NavigationComponent/>
+					{/*<ScrollViewApp/>*/}
 				</div>
 				<FooterComponent/>
 
