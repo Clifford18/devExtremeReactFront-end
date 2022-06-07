@@ -5,6 +5,7 @@ import TreeView from 'devextreme-react/tree-view';
 import {REQUESTLOGSTYPES} from './Navigation Data.js';
 import DataGrid, {Column, FilterRow, Lookup, Pager, Paging} from "devextreme-react/data-grid";
 import './styles/NavigationStyles.css';
+import ScrollViewApp from "../scrollview/ScrollViewApp";
 
 export default class NavigationComponent extends React.Component {
 	constructor(props) {
@@ -22,10 +23,8 @@ export default class NavigationComponent extends React.Component {
 	render() {
 
 
-
 		const {requestData} = this.state;
 		const {requestGridDataSource} = this.state;
-
 
 
 		return (
@@ -45,83 +44,83 @@ export default class NavigationComponent extends React.Component {
 							<div>{requestData.description}</div>
 						</div>
 					</div>
+					<ScrollViewApp/>
+					{/*<DataGrid*/}
+					{/*	id="gridContainer"*/}
+					{/*	className={'dx-card wide-card'}*/}
+					{/*	dataSource={requestGridDataSource}*/}
+					{/*	showBorders={true}*/}
+					{/*	focusedRowEnabled={true}*/}
+					{/*	defaultFocusedRowIndex={0}*/}
+					{/*	columnAutoWidth={true}*/}
+					{/*	columnHidingEnabled={true}*/}
+					{/*	onItemSelectionChanged={this.handleTreeViewSelectionChange}*/}
+					{/*>*/}
+					{/*	<Paging defaultPageSize={10}/>*/}
+					{/*	<Pager showPageSizeSelector={true} showInfo={true}/>*/}
+					{/*	<FilterRow visible={true}/>*/}
 
-					<DataGrid
-						id="gridContainer"
-						className={'dx-card wide-card'}
-						dataSource={requestGridDataSource}
-						showBorders={true}
-						focusedRowEnabled={true}
-						defaultFocusedRowIndex={0}
-						columnAutoWidth={true}
-						columnHidingEnabled={true}
-						onItemSelectionChanged={this.handleTreeViewSelectionChange}
-					>
-						<Paging defaultPageSize={10}/>
-						<Pager showPageSizeSelector={true} showInfo={true}/>
-						<FilterRow visible={true}/>
 
-
-						<Column dataField={'Task_ID'} width={60} hidingPriority={2}/>
-						<Column
-							dataField={'Task_Subject'}
-							width={290}
-							caption={'Subject'}
-							hidingPriority={8}
-						/>
-						<Column
-							dataField={'Task_Status'}
-							caption={'Status'}
-							width={100}
-							hidingPriority={6}
-						/>
-						<Column
-							dataField={'Task_Priority'}
-							caption={'Priority'}
-							width={100}
-							hidingPriority={5}
-						>
-							<Lookup
-								dataSource={priorities}
-								valueExpr={'value'}
-								displayExpr={'name'}
-							/>
-						</Column>
-						<Column
-							dataField={'ResponsibleEmployee.Employee_Full_Name'}
-							caption={'Assigned To'}
-							allowSorting={false}
-							width={150}
-							hidingPriority={7}
-						/>
-						<Column
-							dataField={'Task_Start_Date'}
-							caption={'Start Date'}
-							dataType={'date'}
-							width={100}
-							hidingPriority={3}
-						/>
-						<Column
-							dataField={'Task_Due_Date'}
-							caption={'Due Date'}
-							dataType={'date'}
-							width={100}
-							hidingPriority={4}
-						/>
-						<Column
-							dataField={'Task_Priority'}
-							caption={'Priority'}
-							name={'Priority'}
-							width={100}
-							hidingPriority={1}
-						/>
-						<Column
-							dataField={'Task_Completion'}
-							caption={'Completion'}
-							width={100}
-							hidingPriority={0}
-						/>
-					</DataGrid>
+					{/*	<Column dataField={'Task_ID'} width={60} hidingPriority={2}/>*/}
+					{/*	<Column*/}
+					{/*		dataField={'Task_Subject'}*/}
+					{/*		width={290}*/}
+					{/*		caption={'Subject'}*/}
+					{/*		hidingPriority={8}*/}
+					{/*	/>*/}
+					{/*	<Column*/}
+					{/*		dataField={'Task_Status'}*/}
+					{/*		caption={'Status'}*/}
+					{/*		width={100}*/}
+					{/*		hidingPriority={6}*/}
+					{/*	/>*/}
+					{/*	<Column*/}
+					{/*		dataField={'Task_Priority'}*/}
+					{/*		caption={'Priority'}*/}
+					{/*		width={100}*/}
+					{/*		hidingPriority={5}*/}
+					{/*	>*/}
+					{/*		<Lookup*/}
+					{/*			dataSource={priorities}*/}
+					{/*			valueExpr={'value'}*/}
+					{/*			displayExpr={'name'}*/}
+					{/*		/>*/}
+					{/*	</Column>*/}
+					{/*	<Column*/}
+					{/*		dataField={'ResponsibleEmployee.Employee_Full_Name'}*/}
+					{/*		caption={'Assigned To'}*/}
+					{/*		allowSorting={false}*/}
+					{/*		width={150}*/}
+					{/*		hidingPriority={7}*/}
+					{/*	/>*/}
+					{/*	<Column*/}
+					{/*		dataField={'Task_Start_Date'}*/}
+					{/*		caption={'Start Date'}*/}
+					{/*		dataType={'date'}*/}
+					{/*		width={100}*/}
+					{/*		hidingPriority={3}*/}
+					{/*	/>*/}
+					{/*	<Column*/}
+					{/*		dataField={'Task_Due_Date'}*/}
+					{/*		caption={'Due Date'}*/}
+					{/*		dataType={'date'}*/}
+					{/*		width={100}*/}
+					{/*		hidingPriority={4}*/}
+					{/*	/>*/}
+					{/*	<Column*/}
+					{/*		dataField={'Task_Priority'}*/}
+					{/*		caption={'Priority'}*/}
+					{/*		name={'Priority'}*/}
+					{/*		width={100}*/}
+					{/*		hidingPriority={1}*/}
+					{/*	/>*/}
+					{/*	<Column*/}
+					{/*		dataField={'Task_Completion'}*/}
+					{/*		caption={'Completion'}*/}
+					{/*		width={100}*/}
+					{/*		hidingPriority={0}*/}
+					{/*	/>*/}
+					{/*</DataGrid>*/}
 				</div>
 			</div>
 		);
