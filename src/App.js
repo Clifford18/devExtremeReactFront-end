@@ -7,8 +7,10 @@ import LayoutComponent from "./components/LayoutComponent";
 function App() {
 	return (
 			<div>
-				<LayoutComponent/>
-				{/*<RouterComponent/>*/}
+				{/*<LayoutComponent>
+					hello
+				</LayoutComponent>*/}
+				<RouterComponent/>
 
 			</div>
 
