@@ -4,48 +4,49 @@ import './styles/NavigationStyles.css';
 import FooterComponent from "./FooterComponent";
 import HeaderComponent from "./HeaderComponent";
 
-export default class LayoutComponent extends React.Component {
-
-	render() {
+ const LayoutComponent = (props) => {
 
 
-		return (
-			<div>
-				<HeaderComponent/>
-				<div className="container">
-					<div className="left-content">
-						{/*<div>*/}
-						{/*	<Link to="dashboard/">ATM Bridge Logs</Link>*/}
-						{/*</div>*/}
-						{/*<div>*/}
-						{/*	<Link to="dashboard/atm-logs">ATM Bridge Logs</Link>*/}
-						{/*</div>*/}
-						{/*<div>*/}
-						{/*	<Link to="dashboard/members-portal-logs">Members Portal Logs </Link>*/}
-						{/*</div>*/}
-						{/*<div>*/}
-						{/*	<Link to="dashboard/my-profile">My Profile</Link>*/}
-						{/*</div>*/}
-						{/*<div>*/}
-						{/*	<Link to="dashboard/reset-password">Reset Password</Link>*/}
-						{/*</div>*/}
-						{/*<div>*/}
-						{/*	<Link to="/login">Login page</Link>*/}
-						{/*</div>*/}
-					</div>
-					<div className="right-content">
-
-
-					</div>
+	return (
+		<div>
+			<HeaderComponent/>
+			<div className="container">
+				<div className="left-content">
+					{/*<div>*/}
+					{/*	<Link to="dashboard/">ATM Bridge Logs</Link>*/}
+					{/*</div>*/}
+					{/*<div>*/}
+					{/*	<Link to="dashboard/atm-logs">ATM Bridge Logs</Link>*/}
+					{/*</div>*/}
+					{/*<div>*/}
+					{/*	<Link to="dashboard/members-portal-logs">Members Portal Logs </Link>*/}
+					{/*</div>*/}
+					{/*<div>*/}
+					{/*	<Link to="dashboard/my-profile">My Profile</Link>*/}
+					{/*</div>*/}
+					{/*<div>*/}
+					{/*	<Link to="dashboard/reset-password">Reset Password</Link>*/}
+					{/*</div>*/}
+					{/*<div>*/}
+					{/*	<Link to="/login">Login page</Link>*/}
+					{/*</div>*/}
 				</div>
-				<FooterComponent/>
+				<div className="right-content" style={{background:'red'}}>
+					{props.children}
+
+				</div>
 			</div>
+			<FooterComponent/>
+		</div>
 
-		);
-	}
+	);
 
 
-}
+};
+
+ export default LayoutComponent;
+
+
 
 
 
