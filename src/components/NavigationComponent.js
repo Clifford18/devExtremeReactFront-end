@@ -1,67 +1,60 @@
 import React from 'react';
-import 'devextreme/data/odata/store';
 import 'devextreme/dist/css/dx.light.css';
-import TreeView from 'devextreme-react/tree-view';
-import {REQUESTLOGSTYPES} from './NavigationData.js';
-import DataGrid, {Column, FilterRow, Lookup, Pager, Paging} from "devextreme-react/data-grid";
 import './styles/NavigationStyles.css';
-import ScrollViewApp from "../scrollview/ScrollViewApp";
+import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
+import RequestsLogComponent from "./RequestsLogComponent";
 import ChangePasswordComponent from "./ChangePasswordComponent";
+import ProfileComponent from "./ProfileComponent";
+import ErrorPage from "./ErrorPage";
+import LoginComponent from "./LoginComponent";
 
 export default class NavigationComponent extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			requestData: REQUESTLOGSTYPES[0].items[0],
-			optionsData: REQUESTLOGSTYPES[0].items[0].options,
-		};
-
-		this.handleTreeViewSelectionChange = this.handleTreeViewSelectionChange.bind(this);
-	}
 
 	render() {
 
 
-		const {requestData} = this.state;
-
 		return (
-			<div className="container">
-				<div className="left-content">
-					<TreeView
-						dataSource={REQUESTLOGSTYPES}
-						selectionMode="single"
-						selectByClick={true}
-						onItemSelectionChanged={this.handleTreeViewSelectionChange}
-					/>
-				</div>
-				<div className="right-content">
-					<div className="title-container">
+			<Router>
+				<div className="container">
+					<div className="left-content">
 						<div>
-							<div className="request-data-type">{requestData.title}</div>
-							<div>{requestData.description}</div>
+							<Link to="/">ATM Bridge Logs</Link>
+						</div>
+						<div>
+							<Link to="/atm-logs">ATM Bridge Logs</Link>
+						</div>
+						<div>
+							<Link to="/members-portal-logs" >Members Portal Logs </Link>
+						</div>
+						<div>
+							<Link to="/my-profile" >My Profile</Link>
+						</div>
+						<div>
+							<Link to="/reset-password" >Reset Password</Link>
 						</div>
 					</div>
-					<ChangePasswordComponent/>
-					{/*<ScrollViewApp/>*/}
+					<div className="right-content">
+						<Routes>
+							<Route path="/" element={<RequestsLogComponent />} />
+							<Route path="/atm-logs" element={<RequestsLogComponent />} />
+							<Route path="/members-portal-logs" element={<RequestsLogComponent />} />
+							<Route path="/my-profile" element={<ProfileComponent />} />
+							<Route path="/reset-password" element={<ChangePasswordComponent />} />
 
+							<Route path="*" element={<ErrorPage/>} />
+
+							<Route path="/login" element={<LoginComponent/>} />
+
+						</Routes>
+
+
+					</div>
 				</div>
-			</div>
+			</Router>
+
 		);
 	}
 
-	handleTreeViewSelectionChange(e) {
-		const requestData = e.itemData;
-		// const requestGridDataSource
-		if (requestData.options) {
-			this.setState({
-				requestData: e.itemData,
-				optionsData: requestData.options,
-				requestGridDataSource: e.itemData
-
-			});
-		}
-	}
 
 }
 
