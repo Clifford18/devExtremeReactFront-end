@@ -4,7 +4,7 @@ import './styles/NavigationStyles.css';
 import FooterComponent from "./FooterComponent";
 import HeaderComponent from "./HeaderComponent";
 
-export default class NavigationComponent extends React.Component {
+export default class LayoutComponent extends React.Component {
 
 	render() {
 
