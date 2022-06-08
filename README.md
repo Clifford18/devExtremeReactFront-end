@@ -17,3 +17,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - npm i @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core
 - npm i axios
 - npm i react-router-dom
+- npm i framer-motion
