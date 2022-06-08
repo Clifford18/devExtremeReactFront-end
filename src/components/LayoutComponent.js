@@ -31,7 +31,7 @@ import HeaderComponent from "./HeaderComponent";
 					{/*	<Link to="/login">Login page</Link>*/}
 					{/*</div>*/}
 				</div>
-				<div className="right-content" style={{background:'red'}}>
+				<div className="right-content" >
 					{props.children}
 
 				</div>
