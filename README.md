@@ -9,6 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Font Awesome - version 6.1.1
 - Axios - version 0.26.1
 - React-router-dom - version 6.3.0
+- framer-motion -
 
 ## Packages installed
 
