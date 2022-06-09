@@ -1,6 +1,6 @@
 import React from 'react';
 import 'devextreme/dist/css/dx.light.css';
-import './styles/NavigationStyles.css';
+import './styles/LayoutStyles.css';
 import FooterComponent from "./FooterComponent";
 import HeaderComponent from "./HeaderComponent";
 import {Link} from "react-router-dom";
