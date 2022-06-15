@@ -4,8 +4,9 @@ import AuthContext from "../context/AuthProvider";
 import './styles/LoginStyles.css';
 
 import axios from '../api/axios';
+import {ComputeAuthHashComponent} from "./ComputeAuthHashComponent";
 
-const LOGIN_URL = '/auth';
+const LOGIN_URL = '/o/token';
 
 const LoginComponent = () => {
 	const {setAuth} = useContext(AuthContext);
@@ -28,11 +29,14 @@ const LoginComponent = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
+
+			const hash = await ComputeAuthHashComponent(user, pwd)
+
 			const response = await axios.post(LOGIN_URL,
-				JSON.stringify({user, pwd}),
+				JSON.stringify({username:user, auth_hash:hash}),
 				{
 					headers: {'Content-Type': 'application/json'},
-					withCredentials: true
+					//withCredentials: true
 				}
 			);
 			console.log(JSON.stringify(response?.data));
