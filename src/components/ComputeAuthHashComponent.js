@@ -10,5 +10,5 @@ export const ComputeAuthHashComponent = async (username, password) => {
 	return btoa(bcrypt.hashSync(`${username}::${(await sha256(password))}`, saltRounds))
 }
 
-console.log("Auth hash:", await ComputeAuthHashComponent(AuthUsername, AuthPassword))
+// console.log("Auth hash:", await ComputeAuthHashComponent(AuthUsername, AuthPassword))
 
