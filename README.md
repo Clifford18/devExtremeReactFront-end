@@ -11,6 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React-router-dom - version 6.3.0
 - framer-motion - version 6.3.11
 - crypto-hash - version 2.0.1
+- bcryptjs -version 2.4.3
 
 ## Packages installed
 
@@ -21,3 +22,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - npm i react-router-dom
 - npm i framer-motion
 - npm i crypto-hash
+- npm i bcryptjs
