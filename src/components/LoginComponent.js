@@ -30,26 +30,34 @@ const LoginComponent = () => {
 		e.preventDefault();
 		try {
 
-			const hash = await ComputeAuthHashComponent(user, pwd)
+			const auth_hash = await ComputeAuthHashComponent(user, pwd);
+			const grant_type = "password";
+			const client = "web";
+			const username = user;
 
-			const response = await axios.post(LOGIN_URL,
-				JSON.stringify({username:user, auth_hash:hash}),
+			const response = await axios.post(LOGIN_URL,null,
 				{
 					headers: {'Content-Type': 'application/json'},
-					//withCredentials: true
+					params: {
+						username: username,
+						auth_hash: auth_hash,
+						grant_type:grant_type,
+						client:client
+						
+					},
 				}
 			);
 			console.log(JSON.stringify(response?.data));
 			// console.log(JSON.stringify(response));
-			const accessToken = response?.data?.accessToken;
-			const roles = response?.data?.roles;
-			setAuth(user, pwd, roles, accessToken);
-			setUser('');
-			setPwd('');
-			setSuccess(true);
+			// const accessToken = response?.data?.accessToken;
+			// const roles = response?.data?.roles;
+			// setAuth(user, pwd, roles, accessToken);
+			// setUser('');
+			// setPwd('');
+			// setSuccess(true);
 
 		} catch (err) {
-			if (!err?.response ) {
+			if (!err?.response) {
 				setErrMsg('No server Response');
 			} else if (err.response?.status === 400) {
 				setErrMsg('Missing Username or Password');
@@ -60,7 +68,7 @@ const LoginComponent = () => {
 			}
 			errRef.current.focus();
 		}
-	}
+	};
 
 	return (
 		<>
@@ -104,7 +112,7 @@ const LoginComponent = () => {
 				</section>
 			)}
 		</>
-	)
-}
+	);
+};
 
 export default LoginComponent;
