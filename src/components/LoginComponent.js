@@ -51,8 +51,8 @@ const LoginComponent = () => {
 			console.log(JSON.stringify(response));
 			const accessToken = response?.data?.access_token;
 			console.log(JSON.stringify(accessToken));
-			console.log(JSON.stringify(user));
-			setAuth(user, accessToken);
+			console.log(JSON.stringify(username));
+			setAuth(username, accessToken);
 			setUser('');
 			setPwd('');
 			setSuccess(true);
