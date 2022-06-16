@@ -43,18 +43,19 @@ const LoginComponent = () => {
 						auth_hash: auth_hash,
 						grant_type:grant_type,
 						client:client
-						
+
 					},
 				}
 			);
 			console.log(JSON.stringify(response?.data));
-			// console.log(JSON.stringify(response));
-			// const accessToken = response?.data?.accessToken;
-			// const roles = response?.data?.roles;
-			// setAuth(user, pwd, roles, accessToken);
-			// setUser('');
-			// setPwd('');
-			// setSuccess(true);
+			console.log(JSON.stringify(response));
+			const accessToken = response?.data?.access_token;
+			console.log(JSON.stringify(accessToken));
+			console.log(JSON.stringify(user));
+			setAuth(user, accessToken);
+			setUser('');
+			setPwd('');
+			setSuccess(true);
 
 		} catch (err) {
 			if (!err?.response) {
