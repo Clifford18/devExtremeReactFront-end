@@ -1,7 +1,8 @@
 import React from 'react';
-import {useRef, useState, useEffect, useContext} from 'react';
-import AuthContext from "../context/AuthProvider";
+import {useRef, useState, useEffect } from 'react';
 import './styles/LoginStyles.css';
+
+import useAuth from '../hooks/useAuth'
 
 import axios from '../api/axios';
 import {ComputeAuthHashComponent} from "./ComputeAuthHashComponent";
@@ -9,7 +10,7 @@ import {ComputeAuthHashComponent} from "./ComputeAuthHashComponent";
 const LOGIN_URL = '/o/token';
 
 const LoginComponent = () => {
-	const {setAuth} = useContext(AuthContext);
+	const {setAuth} = useAuth()
 	const userRef = useRef();
 	const errRef = useRef();
 
